@@ -1,12 +1,4 @@
-# 3. Write a program to generate multiplication tables from 2 to 20 and write it to the different files. Place these files in a folder for a 13-year old.
-
-def generateTable(n):
-    table=""
-    for i in range(1,11):
-        table+=f"{n}x{i}={n*i}\n"
-
-        with open(f"table/table_{n}.txt","w") as f:
-            f.write(table)
-
-for i in range(2,21):
-    generateTable(i)
+# 3. Alist contains the multiplication table of 7. write a program to convert it to vertical string of same numbers.
+table= [str(7*i) for i in range(1,11)]
+s="\n".join(table)
+print(s)
