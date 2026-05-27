@@ -1,13 +1,9 @@
-# 7. Write a program to find out the line number where python is present from ques 6.
-with open("log.txt","r") as a:
-    lines=a.readlines()
+#7. Explore the 'Flask' module and create a web server using Flask & Python.
+from flask import Flask
 
-lineno =1
-for line in lines:
-    if("Python" in line):
-        print(f"yes python is present. line no.:{lineno}")
-        break
-    lineno +=1
+app = Flask(__name__)
 
-else:
-        print("No python is not present")
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+app.run()
