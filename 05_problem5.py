@@ -1,10 +1,11 @@
-# 5. Repeat program 4 for a list of such words to be censored.
-words=["Donkey","you","I","hi"]
-with open("ch9-ps-p5.txt" , "r") as f:
-    content=f.read()
-
-for word in words:
-    content=content.replace(word,"#"*len(word))
+#5. Write a program to find the maximum of the numbers in a list using the reduce function.
+from functools import reduce
+l=[1,33,15,51,45,40,10,84,621,84]
+def greater(a,b):
+    if (a>b):
+        return a
     
-with open("ch9-ps-p5.txt","w") as f:
-    f.write(content)
+    return b
+
+
+print (reduce(greater,l))
